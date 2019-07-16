@@ -68,7 +68,7 @@
       const suffix = this.dataset.sizing || '';
       // console.log(suffix);
       // console.log(this.name) // name attribute
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix) // update css variable property value
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix) // set css variable to this.value ... setProperty(--base)
     };
 
     inputs.forEach(input => input.addEventListener('change', handleUpdate)); // loop over each input in nodeList created by querySelector select and a change event listener. On change run handleUpdate callback. input is parameter for each input that has event listener 
